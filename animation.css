@@ -1,0 +1,106 @@
+
+.achievements li:nth-child(1) { animation-delay: 0.15s; }
+.achievements li:nth-child(2) { animation-delay: 0.2s; }
+.achievements li:nth-child(3) { animation-delay: 0.25s; }
+.achievements li:nth-child(4) { animation-delay: 0.3s; }
+.achievements li:nth-child(5) { animation-delay: 0.35s; }
+.achievements li:nth-child(6) { animation-delay: 0.4s; }
+.achievements li:nth-child(7) { animation-delay: 0.45s; }
+.achievements li:nth-child(8) { animation-delay: 0.5s; }
+.achievements li:nth-child(9) { animation-delay: 0.55s; };
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.achievements li:hover {
+    transform: translateX(10px);
+    transition: transform 0.8s ease;
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition:  0.8s ease;
+}
+@keyframes flash {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+@keyframes floating {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .image-doctor img {
+      width: 500px;
+      animation: floating 3s ease-in-out infinite;
+  }
+
+  /* the p under the button in the slider */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.05); /* Slightly enlarge */
+      opacity: 0.9; /* Slightly fade */
+    }
+  }
+  /* Ensure the list item and its span are visible */
+.info.achievements-container ul.achievements li {
+  color: white !important;
+  margin-bottom: 10px !important; /* Keep your spacing */
+  font-size: 1.1em !important;
+  line-height: 1.4 !important;
+  padding-left: 0 !important;
+  opacity: 1 !important; /* LI is visible */
+  /* Remove typing-related overflow, whitespace, animation from LI */
+}
+
+/* Typed.js cursor styling */
+
+
+
+.typed-cursor {
+  opacity: 1;
+  animation: typedjsBlink 0.7s infinite;
+  -webkit-animation: typedjsBlink 0.7s infinite;
+  animation-delay: 0.2s;
+  border-right: 0.15em solid white; /* Your cursor style */
+}
+
+@keyframes typedjsBlink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Optional: Add some spacing between dynamically added paragraphs */
+#typed-paragraphs-container > span {
+  display: block; /* Make each span act like a block for proper line breaks */
+  margin-bottom: 10px; /* Space between paragraphs */
+}

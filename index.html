@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mr Jon Shenfine</title>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+  const typed = new Typed('#typed-output', {
+    strings: ["Typing animation!", "Easy and smooth!"],
+    typeSpeed: 50,
+  });
+</script>
+
+  <!-- fontAwesome  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- Swiper CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+  <!-- AOS animation library  -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: false });</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Mono&family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="animation.css">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./mediaquery.css">
+  
+</head>
+
+<body>
+  
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+      <img src="./images/logo.png" width="200px" alt="logo-image">
+      
+      <!-- 🌐 Language Icon Always Visible -->
+      <div class="dropdown d-lg-none me-2">
+        <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <i class="fas fa-globe"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end">
+          <li>
+            <a class="dropdown-item" href="#" onclick="setLanguage('en')">
+              <i class="fas fa-flag me-2"></i>
+              <span data-i18n="lang_english">English</span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#" onclick="setLanguage('ar')">
+              <i class="fas fa-flag-checkered me-2"></i>
+              <span data-i18n="lang_arabic">Arabic</span>
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="#" onclick="setLanguage('pt')">
+              <i class="fas fa-flag me-2"></i>
+              <span data-i18n="lang_portuguese">Portuguese</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+  
+      <!-- 🟧 Toggler -->
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- 🟦 Navigation Links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav align-items-center">
+          <li class="nav-item"><a data-i18n="home" class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a data-i18n="about" class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a data-i18n="our_team" class="nav-link" href="#Our-team">Our Team</a></li>
+          <li class="nav-item"><a data-i18n="services" class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a data-i18n="packages" class="nav-link" href="#packages">Packages</a></li>
+          <li class="nav-item"><a data-i18n="our_hospitals" class="nav-link" href="#our-hospitals">Our Hospitals</a></li>
+          <li class="nav-item"><a data-i18n="contact" class="nav-link" href="#contact">Contact</a></li>
+  
+          <!-- 🌐 Language Icon (Visible on large screens only) -->
+          <li class="nav-item dropdown d-none d-lg-block ms-3">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fas fa-globe"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="#" onclick="setLanguage('en')">
+                  <i class="fas fa-flag me-2"></i>
+                  <span data-i18n="lang_english">English</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="setLanguage('ar')">
+                  <i class="fas fa-flag-checkered me-2"></i>
+                  <span data-i18n="lang_arabic">Arabic</span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#" onclick="setLanguage('pt')">
+                  <i class="fas fa-flag me-2"></i>
+                  <span data-i18n="lang_portuguese">Portuguese</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+  <section class="slider-section position-relative" id="home">
+    <div class="social-icons">
+      <a href="https://twitter.com/" target="_blank" aria-label="Twitter">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="https://instagram.com/" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://facebook.com/" target="_blank" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      
+      <a href="">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+    <!-- Swiper container -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide">
+      <div class="hero-content  text-center container">
+        <h2 data-i18n="title">Advanced Bariatric & General Surgery</h2>
+        <p style="font-size: 15px;" data-i18n="hero_description" class="fw-bolder descreption">Helping patients achieve lasting<br> health  and confidence through safe <br> , modern surgical care.</p>
+       <div class="cta-container">
+        <a data-i18n="cta_button"  href="#contact" class="cta-button">book your transformation in egypt</a>
+        <p data-i18n="flashy_text"  class="flashy-text">at fair cost by MR shenfine!</p>
+       </div>
+      </div>
+      <img src="./images/slider-1.jpg" alt="Slide 1" />
+      
+    </div>
+   
+    
+  </div>
+  
+
+  <!-- Navigation arrows -->
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+
+  <!-- Pagination (optional) -->
+  <div class="swiper-pagination"></div>
+</div>
+
+
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+  
+  <section class="section" id="about">
+    <div class="container">
+      <h2 data-i18n="soon_in_egypt" style="text-align: center;">Soon in Egypt</h2>
+      <div class="main row align-items-center">
+        <div class="image-doctor col-lg-6 mb-4 mb-lg-0">
+          <img width="100" src="./images/profile.png" alt="Doctor's Profile">
+        </div>
+        
+        <div  class="col-lg-6 achievements-column-wrapper">
+          <video height="800px" class="papyrus-video" src="./images/papyrus.mp4" muted playsinline preload="auto">
+            Your browser does not support the video tag.
+          </video>
+          
+          <div class="info achievements-container">
+            <ul class="achievements">
+              <p data-i18n="our_vision" style="color: black; font-style: italic; font-weight: bolder; text-align: center;">our vision</p>
+              <li>
+                <div data-i18n="about_paragraphs" id="typed-paragraphs-container" style="color: black; font-style: italic; font-weight: bolder;"></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+
+  <div class="flight-container">
+    <img style="width: 600px;"  class="plane-icon" width="100" alt="" src="./images/f35 with flag.png">
+    <div class="location-marker egypt m-3">  <img width="100" src="./images/egypt-flag.png" alt=""></div>
+    <div class="location-marker england m-3"><img width="100" src="./images/uk-flag.png" alt=""></div>
+    <div class="uk-egypt-container text-center flex flex-column justify-content-between align-content-center">
+     
+      <div class="row flex-column align-items-start justify-content-center uk-egypt flex text-center g-3">
+    
+        <div class="letters-wrapper" data-aos="fade-up" data-aos-offset="200" data-aos-duration="600">
+          <div class="col-12 col-md-6 col-lg letters">
+            <span style="--i:0; color: gold;">E</span><span style="--i:1">-</span><span style="--i:2;">E</span><span style="--i:3;">x</span><span style="--i:4;">c</span><span style="--i:5;">e</span><span style="--i:6;">l</span><span style="--i:7;">l</span><span style="--i:8;">e</span><span style="--i:9;">n</span><span style="--i:10;">t</span><span style="--i:11;"> </span><span style="--i:12;">C</span><span style="--i:13;">a</span><span style="--i:14;">r</span><span style="--i:15;">e</span>
+          </div>
+        </div>
+        
+        <div class="letters-wrapper" data-aos="fade-up" data-aos-offset="200" data-aos-duration="600">
+          <div class="col-12 col-md-6 col-lg letters">
+            <span style="--i:0; color: gold;">G</span><span style="--i:1">-</span><span style="--i:2;">G</span><span style="--i:3;">r</span><span style="--i:4;">e</span><span style="--i:5;">a</span><span style="--i:6;">t</span><span style="--i:7;"> </span><span style="--i:8;">H</span><span style="--i:9;">o</span><span style="--i:10;">s</span><span style="--i:11;">p</span><span style="--i:12;">i</span><span style="--i:13;">t</span><span style="--i:14;">a</span><span style="--i:15;">l</span><span style="--i:16;">s</span>
+          </div>
+        </div>
+        
+        <div class="letters-wrapper" data-aos="fade-up" data-aos-offset="200" data-aos-duration="600">
+          <div class="col-12 col-md-6 col-lg letters">
+            <span style="--i:0; color:gold;">Y</span><span style="--i:1">-</span><span style="--i:2;">Y</span><span style="--i:3;">o</span><span style="--i:4;">u</span><span style="--i:5;">r</span><span style="--i:6;"> </span><span style="--i:7;">H</span><span style="--i:8;">e</span><span style="--i:9;">a</span><span style="--i:10;">l</span><span style="--i:11;">t</span><span style="--i:12;">h</span><span style="--i:13;"> </span><span style="--i:14;">F</span><span style="--i:15;">i</span><span style="--i:16;">r</span><span style="--i:17;">s</span><span style="--i:18;">t</span>
+          </div>
+        </div>
+        
+        <div class="letters-wrapper" data-aos="fade-up" data-aos-offset="200" data-aos-duration="600">
+          <div class="col-12 col-md-6 col-lg letters">
+            <span style="--i:0; color:gold;">P</span><span style="--i:1">-</span><span style="--i:2;">P</span><span style="--i:3;">e</span><span style="--i:4;">r</span><span style="--i:5;">s</span><span style="--i:6;">o</span><span style="--i:7;">n</span><span style="--i:8;">a</span><span style="--i:9;">l</span><span style="--i:10;">i</span><span style="--i:11;">z</span><span style="--i:12;">e</span><span style="--i:13;">d</span><span style="--i:14;"> </span><span style="--i:15;">P</span><span style="--i:16;">l</span><span style="--i:17;">a</span><span style="--i:18;">n</span><span style="--i:19;">s</span>
+          </div>
+        </div>
+        
+        <div class="letters-wrapper" data-aos="fade-up" data-aos-offset="200" data-aos-duration="600">
+          <div class="col-12 col-md-6 col-lg letters">
+            <span style="--i:0; color:gold;">T</span><span style="--i:1">-</span><span style="--i:2;">T</span><span style="--i:3;">r</span><span style="--i:4;">u</span><span style="--i:5;">s</span><span style="--i:6;">t</span><span style="--i:7;">e</span><span style="--i:8;">d</span><span style="--i:9;"> </span><span style="--i:10;">O</span><span style="--i:11;">v</span><span style="--i:12;">e</span><span style="--i:13;">r</span><span style="--i:14;">s</span><span style="--i:15;">i</span><span style="--i:16;">g</span><span style="--i:17;">h</span><span style="--i:18;">t</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+
+
+<section class="team section" id="Our-team">
+  <h2 data-i18n="meet_our_experts" class="text-center main-title">Meet Our Experts</h2>
+  <div class="container contaier_team">
+    <div class="row boxes g-3">
+     
+      <div class="col-12 col-md-6 col-lg-6">
+        <div class="box">
+          <div class="team_img">
+            <img width="100%" src="/images/profile.png" alt="">
+          </div>
+          <div class="team_info">
+            <h4 data-i18n="jon_name">Mr.Jon Shenfine</h4>
+            <p data-i18n="jon_bio">
+              Mr. Jon is the lead Upper GI and Bariatric Surgeon heading the bariatric surgery program in Egypt. <br> Patients receive world-class surgery with comprehensive pre- and postoperative follow-up care in the UK, combining expert care with convenience. <br>
+              With over 20 years of experience in advanced laparoscopic and weight loss <br> surgery across the UK and Australia, <br> Jon ensures safe, effective, and personalized treatment — all at an affordable price tailored to make quality care accessible
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-12 col-md-6 col-lg-6">
+        <div class="box">
+          <div class="team_img">
+            <img width="100%" src="/images/mohamed riyad3.png" alt="">
+          </div>
+          <div class="team_info">
+            <h4 data-i18n="mohamed_name">Dr. mohamed riad warda</h4>
+            <p data-i18n="mohamed_bio">
+              Dr. Mohamed Riad Warda holds an M.D. and MRCS (England), along with a diploma in laparoscopic surgery from the University of Strasbourg. <br> He is a highly skilled consultant specializing in general, laparoscopic, bariatric, endocrine, and vascular surgery, as well as endovascular interventions. <br> Dr. Warda combines advanced surgical expertise with a patient-focused approach to deliver comprehensive care across multiple surgical specialties.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      
+
+
+
+
+ <!-- second two members  -->
+ <div class="col-12 col-md-6 col-lg-6">
+  <div class="box">
+    <div class="team_img">
+      <img class="Mr-wale" width="100%" src="/images/wael6.png" alt="">
+    </div>
+    <div class="team_info">
+      <h4 data-i18n="waell_name">Mr.Waell abdel rahman </h4>
+      <p data-i18n="waell_bio">
+        a general and laparoscopic surgeon with medical qualifications including MB BCh, MRCS, FRCS (Eng), an MD, and a master’s degree. <br> I have over 10 years of experience, including six years practicing between the UK and Egypt, where I have developed advanced skills in minimally invasive and laparoscopic surgery. <br> I’m passionate about helping patients in both countries improve their health and quality of life through personalized, expert care.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+      <div class="col-12 col-md-6 col-lg-6">
+        <div class="box">
+          <div class="team_img">
+            <img width="100%" src="/images/eslam.png" alt="">
+          </div>
+          <div class="team_info">
+            <h4 data-i18n="eslam_name">Dr. Eslam abuseif</h4>
+            <p data-i18n="eslam_bio"> 
+              With over 15 years of experience, I specialize in gastrointestinal surgeries, <br> hernia repairs, and gallbladder procedures. <br> As a proud member of IFSO and the Egyptian Surgical Association, I’m dedicated to providing care that’s based on the latest evidence and tailored to you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section services-section-w-icons" id="services">
+  <div class="container text-center py-5">
+    <h2 class="main-title" data-i18n="services_title">SERVICES</h2>
+
+    <!-- First Row (5 items) -->
+    <div class="row justify-content-center">
+      <div class="col-6 col-sm-4 col-md-2 m-2">
+        <img src="/images/icons/Sleeve Gastrectomy@4x.png" class="img-fluid mb-2" alt="">
+        <p data-i18n="sleeve_gastrectomy">Sleeve Gastrectomy</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 m-2">
+        <img src="/images/icons/Bikini Line Sleeve Gastrectomy@4x.png" class="img-fluid mb-2" alt="">
+        <p data-i18n="bikini_sleeve">Bikini Line Sleeve Gastrectomy</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 m-2">
+        <img src="/images/icons/Roux-en-Y Gastric Bypass@4x.png" class="img-fluid mb-2" alt="">
+        <p data-i18n="roux_bypass">Roux-en-Y Gastric Bypass</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 m-2">
+        <img src="/images/icons/Mini Gastric Bypass@4x.png" class="img-fluid mb-2" alt="">
+        <p data-i18n="mini_bypass">Mini Gastric Bypass</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 m-2">
+        <img src="/images/icons/Revision Weight Loss Surgery@4x.png" class="img-fluid mb-2" alt="">
+        <p data-i18n="revision_surgery">Revision Weight Loss Surgery</p>
+      </div>
+    </div>
+
+    <!-- Second Row (4 items) -->
+    <div class="row justify-content-center mt-4">
+      <div class="col-6 col-sm-4 col-md-2 m-2">
+        <img src="/images/icons/Gastric Balloon@4x.png" class="img-fluid mb-2" alt="">
+        <p data-i18n="gastric_balloon">Gastric Balloon</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 m-2">
+        <img src="/images/icons/Colonoscopy and Gastroscopy@4x.png" class="img-fluid mb-2" alt="">
+        <p data-i18n="scopy">Colonoscopy and Gastroscopy</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 m-2">
+        <img src="/images/icons/Laparoscopic Hernia Surgery@4x.png" class="img-fluid mb-2" alt="">
+        <p data-i18n="hernia_surgery">Laparoscopic Hernia Surgery</p>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2 m-2">
+        <img src="/images/icons/Laparoscopic Gallbladder Surgery@4x.png" class="img-fluid mb-2" alt="">
+        <p data-i18n="gallbladder_surgery">Laparoscopic Gallbladder Surgery</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<section class="section packages" id="packages">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="main-title" data-i18n="packages_title">Bariatric Surgery Packages in Egypt</h2>
+      <p class="fw-bold" data-i18n="packages_subtitle">Expert Care with UK Consultant Partnership<br>Safe, Affordable & Tailored for You</p>
+      <p class="mt-4" data-i18n="packages_cta">Choose Your Journey — Silver, Gold, or Platinum Packages</p>
+    </div>
+
+    <div class="row">
+      <!-- Silver Package -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="package-card package-card-silver text-center p-4">
+          <i class="fas fa-medal fa-3x mb-3" style="color: silver;"></i>
+          <h3 data-i18n="silver_title">Silver Package</h3>
+          <p class="subtitle" data-i18n="silver_sub">Core Surgical Care</p>
+          <p data-i18n="silver_desc">Essential, high-quality surgery for patients seeking trusted, affordable treatment.</p>
+          <ul class="list-unstyled text-start">
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="silver_1">Free plastic consultation in one</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="silver_2">Pre-op consultation in the UK</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="silver_3">Sleeve gastrectomy or gastric bypass</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="silver_4">1 night hospital stay</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="silver_5">Post-op medications</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="silver_6">1 follow-up appointment in the UK</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="silver_7">Airport-hospital-hotel transfers</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="silver_8">English-speaking coordinator</span></li>
+          </ul>
+          <p class="mt-3"><small data-i18n="silver_note">Flights: Not included. Optional booking assistance available.</small></p>
+          <a href="#contact" class="package-button" data-i18n="choose_btn">Choose This Package</a>
+        </div>
+      </div>
+
+      <!-- Gold Package -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="package-card text-center p-4">
+          <i class="fas fa-medal fa-3x mb-3" style="color: gold;"></i>
+          <h3 data-i18n="gold_title">Gold Package</h3>
+          <p class="subtitle" data-i18n="gold_sub">Comfort & Recovery</p>
+          <p data-i18n="gold_desc">Extended recovery with personalized support and comfort.</p>
+          <ul class="list-unstyled text-start">
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="gold_1">Free plastic consultation in one</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="gold_2">Everything in Silver package, plus:</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="gold_3">2–3 nights in 4-star recovery hotel</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="gold_4">Nursing care during hotel stay</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="gold_5">Pre & post-op dietitian consultations</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="gold_6">Enhanced recovery kit</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="gold_7">2 UK follow-up appointments</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="gold_8">Premium transport</span></li>
+          </ul>
+          <p class="mt-3"><small data-i18n="gold_note">Flights: Not included. Optional assistance available.</small></p>
+          <a href="#contact" class="package-button gold-package" data-i18n="choose_btn">Choose This Package</a>
+        </div>
+      </div>
+
+      <!-- Platinum Package -->
+      <div class="col-12 col-md-6 col-lg-4 mb-4">
+        <div class="package-card package-card-platinum text-center p-4">
+          <i class="fas fa-gem fa-3x mb-3" style="color: #b9f2ff;"></i>
+          <h3 data-i18n="platinum_title">Platinum Package</h3>
+          <p class="subtitle" data-i18n="platinum_sub">All-Inclusive Health & Heritage</p>
+          <p data-i18n="platinum_desc">Luxury medical tourism experience with full concierge service.</p>
+          <ul class="list-unstyled text-start">
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="platinum_1">Free plastic consultation in one</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="platinum_2">Everything in Gold package, plus:</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="platinum_3">Return international flights included</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="platinum_4">VIP airport meet & greet</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="platinum_5">7 nights in 5-star Cairo hotel</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="platinum_6">Private driver and translator</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="platinum_7">Guided cultural tours</span></li>
+            <li><i class="fas fa-check-circle me-2"></i><span data-i18n="platinum_8">3 UK follow-ups</span></li>
+          </ul>
+          <p class="mt-3"><small data-i18n="platinum_note">Full luxury experience with comprehensive aftercare</small></p>
+          <a href="#contact" class="package-button" data-i18n="choose_btn">Choose This Package</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add-ons Section -->
+    <div class="mt-5 text-center">
+      <h3 data-i18n="addons_title">Optional Add-Ons (Silver & Gold)</h3>
+      <ul class="list-unstyled">
+        <li><i class="fas fa-plus-circle me-2"></i><span data-i18n="addon_1">Flight booking & visa support</span></li>
+        <li><i class="fas fa-plus-circle me-2"></i><span data-i18n="addon_2">Companion accommodation</span></li>
+        <li><i class="fas fa-plus-circle me-2"></i><span data-i18n="addon_3">Private nurse during hotel stay</span></li>
+        <li><i class="fas fa-plus-circle me-2"></i><span data-i18n="addon_4">Cosmetic procedures</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="our-hospitals">
+  <div class="container">
+    <h1 class="main-title  text-center mb-4"data-i18n="hospitals_title">Premiere Hospitals</h1>
+    <div class="row g-4">
+      
+      <div class="col-12 col-md-6">
+        <div class="p-3 border rounded text-center h-100">
+          <img width="100%" src="/images/Hospital1 (1).jpg" alt="Hospital 1" class="img-fluid rounded">
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="p-3 border rounded text-center h-100">
+          <img src="/images/Hospital2 (1).jpg" alt="Hospital 2" class="img-fluid rounded">
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="p-3 border rounded text-center h-100">
+          <img src="/images/Hospital3 (1).jpg" alt="Hospital 3" class="img-fluid rounded">
+        </div>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <div class="p-3 border rounded text-center h-100">
+          <img src="/images/Hospital4 (1).jpg" alt="Hospital 4" class="img-fluid rounded">
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="section" id="contact">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="contact-form-wrapper">
+          <h2 class="text-center mb-4" data-i18n="contact_title">Schedule an Appointment</h2>
+          <form class="contact-form" action="https://formspree.io/f/xgvyqelb" method="POST">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label class="form-label" data-i18n="first_name">First Name *</label>
+                <input type="text" class="form-control" name="first-name" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" data-i18n="last_name">Last Name *</label>
+                <input type="text" class="form-control" name="last-name" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" data-i18n="phone_number">Phone Number *</label>
+                <input type="tel" class="form-control" name="phone" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" data-i18n="email">Email *</label>
+                <input type="email" class="form-control" name="email" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" data-i18n="country">Country *</label>
+                <input type="text" class="form-control" name="country" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" data-i18n="city">City *</label>
+                <input type="text" class="form-control" name="city" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" data-i18n="nationality">Nationality *</label>
+                <input type="text" class="form-control" name="nationality" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" data-i18n="occupation">Occupation *</label>
+                <input type="text" class="form-control" name="occupation" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" data-i18n="age">Age *</label>
+                <input type="number" class="form-control" name="age" required>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" data-i18n="gender">Gender *</label>
+                <select class="form-select" name="gender" required>
+                  <option value="Male" data-i18n="male">Male</option>
+                  <option value="Female" data-i18n="female">Female</option>
+                </select>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label class="form-label" data-i18n="weight">Weight *</label>
+                <input type="text" class="form-control" name="weight" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label class="form-label" data-i18n="height">Height *</label>
+                <input type="text" class="form-control" name="height" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label class="form-label" data-i18n="bmi">BMI *</label>
+                <input type="text" class="form-control" name="bmi" required>
+              </div>
+              <div class="col-md-12 mb-3">
+                <label class="form-label" data-i18n="medical_condition">Are you suffering from any medical condition *</label>
+                <textarea class="form-control" name="medical-condition" rows="2" required></textarea>
+              </div>
+              <div class="col-md-12 mb-3">
+                <label class="form-label" data-i18n="previous_surgeries">Any previous surgeries *</label>
+                <textarea class="form-control" name="previous-surgeries" rows="2" required></textarea>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" data-i18n="heartburns">Do you experience heartburns?</label>
+                <select class="form-select" name="heartburn">
+                  <option data-i18n="no">No, I don’t</option>
+                  <option data-i18n="yes">Yes, I do</option>
+                </select>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" data-i18n="smoker">Smoker</label>
+                <select class="form-select" name="smoker">
+                  <option data-i18n="no">No</option>
+                  <option data-i18n="yes">Yes</option>
+                </select>
+              </div>
+              <div class="col-md-12 mb-3">
+                <label class="form-label" data-i18n="allergies">Allergies</label>
+                <textarea class="form-control" name="allergies" rows="2"></textarea>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" data-i18n="normal_deliveries">Number of normal deliveries</label>
+                <input type="number" class="form-control" name="normal-deliveries" value="0">
+              </div>
+              <div class="col-md-6 mb-3">
+                <label class="form-label" data-i18n="caesarean_section">Number of Caesarean Section</label>
+                <input type="number" class="form-control" name="caesarean-section" value="0">
+              </div>
+              <div class="col-md-12 mb-4">
+                <label class="form-label" data-i18n="surgery_type">Type of surgery requested</label>
+                <input type="text" class="form-control" name="surgery-type">
+              </div>
+              <div class="col-12 text-center">
+                <button type="submit" class="package-button" data-i18n="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- AOS animation library  -->
+  <script>AOS.init();</script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./main.js"></script>
+  
+</body>
+
+</html>
