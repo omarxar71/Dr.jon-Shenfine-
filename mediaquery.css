@@ -151,7 +151,6 @@ transform: translate(-50% , -50%);
     top: 50%;
     left: 10%;
     transform: translateY(-50%);
-    color: white;
     z-index: 10;
     max-width: 90%;
   }
@@ -171,7 +170,9 @@ transform: translate(-50% , -50%);
   .swiper-button-next,.swiper-button-prev{
     display: none;
   }
-
+  .cta-button{
+    font-size: 15px;
+  }
   
   
 
@@ -266,16 +267,16 @@ transform: translate(-50% , -50%);
 .egypt , .england{
   display: none;
 }
-.uk-egypt{
+.uk-egypt {
   position: relative;
   left: 0;
-  bottom: -600px ;
+  bottom: -420px;
 }
+
 .uk-egypt .letters span {
   font-size: 19px;
 }
-.flight-container{
- width: cover;
-}
+
+
 
   }

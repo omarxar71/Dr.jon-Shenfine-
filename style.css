@@ -136,6 +136,7 @@
       position: relative;
       overflow: hidden;
       z-index: 1;
+      font-size: 20px;
     }
     
     .cta-button::before {
@@ -288,7 +289,7 @@ nav{
 
 
 
-    .hero-content h2 {
+    .hero-content  {
       font-size: 3rem;
       color: var(--secondary-color);
       margin-bottom: 20px;
@@ -725,10 +726,14 @@ nav{
   position: relative; /* Essential for positioning the plane */
   overflow: hidden; /* Keep plane inside container initially */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  background-image: url("./images/big be and pyraminds 3.jpg");
-  background-position: unset;
+  background-image: url("./pictures/big\ be\ and\ pyraminds\ 3\ \(1\).jpg");
+  background-position: center;
   background-size: cover;
   position: relative;
+  /* height:100px;  */
+  background-size: 110%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .plane-icon {
