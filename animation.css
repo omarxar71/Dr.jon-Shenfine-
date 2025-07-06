@@ -42,23 +42,6 @@
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
-@keyframes floating {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
-  }
-
-  .image-doctor img {
-      width: 500px;
-      animation: floating 3s ease-in-out infinite;
-  }
-
   /* the p under the button in the slider */
   @keyframes pulse {
     0% {
