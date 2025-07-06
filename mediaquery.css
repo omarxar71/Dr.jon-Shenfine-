@@ -235,9 +235,7 @@ transform: translate(-50% , -50%);
 #packages {
   overflow: hidden;
 }
-.packages .main-title{
-  font-size: 15px;
-}
+
 .package-card{
   min-height: 1000px;
 }
@@ -283,5 +281,7 @@ transform: translate(-50% , -50%);
   font-style: italic;
 }
 
-
+.main-title{
+  font-size: 1rem;
+}
   }
