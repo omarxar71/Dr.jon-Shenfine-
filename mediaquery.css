@@ -1,4 +1,8 @@
 @media (max-width: 991.98px) {
+  .uk-egypt {
+ 
+    left: 22% !important;
+}
     .package-card{
       min-height: 900px;
     }
