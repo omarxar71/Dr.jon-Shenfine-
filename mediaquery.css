@@ -197,6 +197,10 @@ transform: translate(-50% , -50%);
 .achievements-container{
   width: 100%;
 }
+.papyrus-video {
+  height: 112%;
+}
+
 /* our teams  */
 .contaier_team .box {
   /* background: white; */
@@ -269,8 +273,8 @@ transform: translate(-50% , -50%);
 }
 .uk-egypt {
   position: relative;
-  left: 0;
-  bottom: -420px;
+  left: 0 !important;
+  bottom: -488px;
 }
 
 .uk-egypt .letters span {

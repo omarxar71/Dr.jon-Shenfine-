@@ -221,6 +221,14 @@ nav{
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
      
     }
+    .uk-egypt {
+      position: absolute;
+      bottom: 50px;
+      left: 31% !important;
+      transform: translatey(-50%);
+      font-weight: bolder;
+      font-style: italic;
+  }
 
     .navbar-brand {
       font-family: 'Playfair Display', serif;
