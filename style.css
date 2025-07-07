@@ -462,127 +462,74 @@ nav{
     }
      /* // the about section */
 
-    
-        .image-doctor img {
-            width: 450px;
-            
-        }
-    .main{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .info {
-        padding: 2rem;
-        position: relative;
-    }
+/* the about section */
+.image-doctor img {
+  width: 450px;
+}
+.image-doctor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.info {
+  padding: 2rem;
+  position: relative;
+}
+.doctor-name {
+  font-family: 'Playfair Display', serif;
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  opacity: 0;
+  animation: fadeInUp 0.5s ease forwards;
+}
+.credentials {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0;
+}
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+}
+.achievements li {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+  opacity: 0;
+}
+#about h2 {
+  color: var(--secondary-color);
+  animation: flash 2s infinite;
+  padding-bottom: 15px;
+}
 
-    .doctor-name {
-        font-family: 'Playfair Display', serif;
-        color: var(--secondary-color);
-        font-size: 2.5rem;
-        margin-bottom: 0.5rem;
-        opacity: 0;
-        animation: fadeInUp 0.5s ease forwards;
-    }
-
-    .credentials {
-        color: var(--secondary-color);
-        font-size: 1.2rem;
-        margin-bottom: 2rem;
-        opacity: 0;
-    
-    }
-
-    .achievements {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        z-index: 100;
-    }
-
-    .achievements li {
-        color: #fff;
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-        padding-left: 2rem;
-        position: relative;
-        opacity: 0;
-     
-       
-    }
-
-
-
-    #about h2 {
-      color: var(--secondary-color);
-      animation: flash 2s infinite;
-      padding-bottom: 15px;
-  
-    }
-    .image-doctor {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-
-
-
-    /* the papyrus styling start  */
-/* Section styling remains mostly the same, no absolute video here */
+/* the papyrus styling start */
 .section#about {
-  position: relative; /* Keep relative if other elements might be absolutely positioned within it later, but not strictly needed for video/text here */
-  min-height: 100vh; /* Maintain minimum height for better visual effect */
-  display: flex; /* Helps center the container */
-  align-items: center; /* Vertically center the container */
-  justify-content: center; /* Horizontally center the container */
-  background-color: #000; /* Fallback background */
-  /* overflow: hidden; */
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
 }
 
 /* New wrapper for the right column that will contain the video and text */
 .achievements-column-wrapper {
-  position: relative; /* ESSENTIAL: This makes it the positioning context for the video and overlay */
-  height: 800px !important; /* Set a fixed height for the column so the video has a defined space. Adjust as needed. */
-  /* overflow: hidden; */
-  display: flex; /* Use flex to ensure content can be centered within it */
-  align-items: center; /* Vertically center content */
-  justify-content: center; /* Horizontally center content */
+  position: relative;
+  height: 800px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Styles for the papyrus video - now within its column */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* the papyrus styling end  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* All existing styles from your provided code that are not explicitly changed below should remain */
+/* the papyrus styling end */
 
 /* SECTION STYLING */
 .section#about {
@@ -592,7 +539,6 @@ nav{
   align-items: center;
   justify-content: center;
   background-color: #000;
-  /* overflow: hidden; */
 }
 
 /* MAIN ROW AND IMAGE */
@@ -609,25 +555,23 @@ nav{
   flex-direction: column;
 }
 
-
 /* GENERAL H2 STYLING */
 #about h2 {
-  color: var(--secondary-color); /* Assuming you have --secondary-color defined */
+  color: var(--secondary-color);
   animation: flash 2s infinite;
   padding-bottom: 15px;
-  text-align: center; /* Ensure this is centered as per your HTML */
+  text-align: center;
 }
 
 /* RIGHT COLUMN WRAPPER - CONTAINS VIDEO AND TEXT OVERLAY */
 .col-lg-6.achievements-column-wrapper {
-  position: relative; /* ESSENTIAL: Context for absolute children */
-  height: 500px; /* Define a height for the column */
+  position: relative;
+  height: 550px;
+  min-height: 550px;
   overflow: hidden;
-  display: flex; /* For centering the video/overlay if they don't fill */
+  display: flex;
   align-items: center;
   justify-content: center;
-  /* DEBUG BORDER: Remove after verifying structure */
-  /* border: 2px solid red !important; */
 }
 
 /* PAPYRUS VIDEO STYLES (BACKGROUND) */
@@ -637,85 +581,107 @@ nav{
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  height: 130%;
-  object-fit: cover; /* Ensures video covers the area */
+  height: 128%;
+  object-fit: cover;
   display: block;
-  z-index: 1; /* Behind the text overlay */
-  /* DEBUG BORDER: Remove after verifying structure */
-  /* border: 2px solid blue !important; */
+  z-index: 1;
 }
 
 /* DESCRIPTION TEXT CONTAINER (OVERLAY) */
 @keyframes appear-after-video {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 @keyframes fadeInContainer {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 }
 .info.achievements-container {
- top: 0;
- left: 0;
- width: 100%;
- height: 100%;
- display: flex;
- align-items: center;
- justify-content: center;
- z-index: 2;
- opacity: 0;
- pointer-events: none;
- /* background-color: rgba(0, 0, 0, 0.7); */
- padding: 20px;
- box-sizing: border-box;
- overflow-y: auto;
- 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
 }
 
 .info.achievements-container.is-visible {
   animation: fadeInContainer 4s forwards;
-  /*Applythefade-inanimation*/-webkit-animation: fadeInContainer 0.4s forwards;
-  /*Noneedtosetopacity: 1 here, the animation handles it */;
+  -webkit-animation: fadeInContainer 0.4s forwards;
   -webkit-animation: fadeInContainer 7s forwards;
 }
+
 /* LIST (UL) STYLES WITHIN THE OVERLAY */
 .info.achievements-container ul.achievements {
-  color: white !important; /* Ensure text is white */
-  list-style: none !important; /* Remove default bullet points */
-  padding: 0 !important; /* Remove default padding */
-  margin: 0 !important; /* Remove default margin */
+  color: white !important;
+  list-style: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
   text-align: left !important;
-  max-width: 70% !important; /* Constrain text width */
-  /* Z-index on UL itself is not needed here; the parent container has it */
-
+  max-width: 70% !important;
 }
 
 /* LIST ITEM (LI) STYLES WITHIN THE OVERLAY */
 .info.achievements-container ul.achievements li {
-  color: white !important; /* Ensure individual list items are white */
+  color: white !important;
   margin-bottom: 10px !important;
   font-size: 1.1em !important;
   line-height: 1.4 !important;
-  padding-left: 0 !important; /* Remove any padding-left from general li rules */
-  animation: none;
-  /* *** CRITICAL FIX: Ensure LI IS VISIBLE AND NOT ANIMATING INDEPENDENTLY *** */
-  opacity: 1 !important; /* Force visible opacity when parent is visible */
-  transform: translateX(0px) !important; /* Reset any previous transforms */
+  padding-left: 0 !important;
+  opacity: 1 !important;
+  transform: translateX(0px) !important;
 }
 .info.achievements-container.is-visible ul.achievements li {
-  /*ApplyLIanimationwhenparenthas'is-visible'*/animation: appear-after-video 7s ease-out forwards;
-  /*Adjustduration/timingasneeded*/-webkit-animation: appear-after-video 1s ease-out forwards;
+  animation: appear-after-video 7s ease-out forwards;
+  -webkit-animation: appear-after-video 1s ease-out forwards;
+}
 
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
 
+  .image-doctor img {
+    width: 250px;
+    margin-bottom: 20px;
+  }
 
+  .col-lg-6.achievements-column-wrapper {
+    height: 1800px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .papyrus-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto; /* Changed to auto to respect aspect ratio */
+    max-width: 390%; /* Prevent overflow */
+    height: 100%; /* Match container height */
+    object-fit: contain; /* Use contain to prevent side cropping */
+  }
+
+  .info.achievements-container {
+    padding: 10px;
+    height: 100%;
+  }
+
+  .info.achievements-container ul.achievements {
+    max-width: 90% !important;
+    font-size: 0.9em !important;
+  }
 }
 
 
@@ -1674,7 +1640,11 @@ right: -30px;
   -o-border-radius: 5px; 
 }
 
-
+.text-center.mt-4 {
+  font-weight: bold; /* Makes the text bolder */
+  font-size: 1.5rem; /* Increases the font size (adjust as needed, e.g., 1.5rem, 2rem) */
+  line-height: 1.6; /* Improves readability with larger text */
+}
 
 
 
