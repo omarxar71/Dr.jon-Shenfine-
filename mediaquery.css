@@ -42,7 +42,9 @@
   
   /* Extra Small Devices */
   @media (max-width: 575.98px) {
- 
+    .logo-nav{
+      width: 100px !important;
+    }
     .container{
       width: 80%;
       margin: auto;
