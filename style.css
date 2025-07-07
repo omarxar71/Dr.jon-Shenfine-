@@ -655,11 +655,13 @@ nav{
     margin-bottom: 20px;
   }
 
-  .col-lg-6.achievements-column-wrapper {
-    height: 1800px;
-    width: 100%;
-    margin-top: 20px;
+.col-lg-6.achievements-column-wrapper {
+    height: 800px;
+    width: 120%; /* Increased from 100% to give more space for the video */
+    margin-left: 2%; /* Adjust to center the wider container */
+    margin-top: 10px;
     position: relative;
+    overflow: visible; /* Ensure the video can extend beyond the original width */
   }
 
   .papyrus-video {
