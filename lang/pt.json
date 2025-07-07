@@ -13,7 +13,7 @@
   "hero_description": "Ajudando os pacientes a alcançar saúde duradoura e confiança por meio de cuidados cirúrgicos seguros e modernos.<br>",
   "cta_button": "reserve sua transformação no Egito",
   "flashy_text": "por um preço justo com o Sr. Shenfine!",
-   "soon_in_egypt": "Em breve no Egito",
+   "soon_in_egypt": "Sr. Shenfine, pioneiro da bariátrica em breve no Egito",
     "meet_our_experts": "Conheça Nossos Especialistas",
     "jon_name": "Sr. Jon Shenfine",
   "jon_bio": "O Sr. Jon é o principal cirurgião gastrointestinal superior e bariátrico, liderando o programa de cirurgia bariátrica no Egito. <br> Os pacientes recebem cirurgia de classe mundial com acompanhamento pré e pós-operatório completo no Reino Unido, combinando atendimento especializado com conveniência. <br><br> Com mais de 20 anos de experiência em cirurgia laparoscópica avançada e perda de peso no Reino Unido e na Austrália, <br> Jon garante um tratamento seguro, eficaz e personalizado — tudo a um preço acessível, projetado para tornar o atendimento de qualidade acessível.",
@@ -36,7 +36,7 @@
   "packages_title": "Pacotes de Cirurgia Bariátrica no Egito",
   "packages_subtitle": "Cuidado especializado com parceria de consultores do Reino Unido<br>Seguro, acessível e personalizado para você",
   "packages_cta": "Escolha sua jornada — Pacotes Prata, Ouro ou Platina",
-  "silver_title": "Pacote Prata",
+  "silver_title": "Pacote Menkaure",
   "silver_sub": "Cuidados Cirúrgicos Essenciais",
   "silver_desc": "Cirurgia de alta qualidade para quem busca tratamento acessível e confiável.",
   "silver_1": "Consulta gratuita de cirurgia plástica",
@@ -49,7 +49,7 @@
   "silver_8": "Coordenador que fala inglês",
   "silver_note": "Voos não incluídos. Ajuda com reserva disponível.",
   "choose_btn": "Escolher Este Pacote",
-  "gold_title": "Pacote Ouro",
+  "gold_title": "Pacote Khafre",
   "gold_sub": "Conforto & Recuperação",
   "gold_desc": "Recuperação estendida com suporte e conforto personalizados.",
   "gold_1": "Consulta gratuita de cirurgia plástica",
@@ -61,7 +61,7 @@
   "gold_7": "2 consultas de acompanhamento no Reino Unido",
   "gold_8": "Transporte premium",
   "gold_note": "Voos não incluídos. Ajuda disponível mediante solicitação.",
-  "platinum_title": "Pacote Platina",
+  "platinum_title": "Pacote Khufu",
   "platinum_sub": "Saúde e Cultura Tudo-Incluso",
   "platinum_desc": "Turismo médico de luxo com serviço de concierge completo.",
   "platinum_1": "Consulta gratuita de cirurgia plástica",
@@ -73,7 +73,7 @@
   "platinum_7": "Passeios culturais guiados",
   "platinum_8": "3 acompanhamentos no Reino Unido",
   "platinum_note": "Experiência de luxo com cuidado pós-operatório completo",
-  "addons_title": "Adicionais Opcionais (Prata & Ouro)",
+  "addons_title": "Adicionais Opcionais",
   "addon_1": "Reserva de voos e suporte para visto",
   "addon_2": "Acomodação para acompanhante",
   "addon_3": "Enfermeira particular durante a estadia",
@@ -111,8 +111,21 @@
     "Ao contrário de muitas opções no exterior, você não ficará sem suporte. Sua segurança e sucesso a longo prazo são minhas principais prioridades.",
     "Esta é uma jornada completa — não apenas uma operação. Ofereço cuidados abrangentes desde a avaliação pré-operatória no Reino Unido, até a cirurgia no exterior e acompanhamento completo em casa."
   ],
-  "our_vision": "nossa visão"
-
+  "our_vision": "nossa visão",
+  "your_journey_title": "Sua Jornada Bariátrica no Egito",
+  "your_journey_welcome": "Bem-vindo à sua Jornada Bariátrica no Egito! Estamos aqui para tornar sua chegada tranquila, segura e sem estresse.",
+  "flight_options": "Opções de Voo",
+  "flight_option_1": "Voo de baixo custo de Londres Luton para o Aeroporto de Sphinx - Wizz Air: segunda, quarta e sexta - EasyJet: terça, quinta e sábado",
+  "flight_option_2": "Voos diários de Londres Heathrow para o Aeroporto Internacional do Cairo - Egypt Air: até 3 voos diários - British Airways: até 2 voos diários",
+  "arrival_cairo": "Chegada ao Cairo",
+  "arrival_description": "Ao pousar no Egito, sua jornada para uma vida mais saudável oficialmente começa! Aqui está o que esperar ao chegar:",
+  "visa_on_arrival": "Visto na Chegada",
+  "visa_cost": "Custo: Cerca de 25 USD (aproximadamente 20 GBP)",
+  "visa_location": "Pegue-o no Balcão de Vistos antes do controle de passaporte",
+  "meet_driver": "Encontro com o Motorista",
+  "meet_driver_steps_1": "Saia pelas portas principais do terminal",
+  "meet_driver_steps_2": "Procure por um motorista segurando uma placa com seu nome e nosso logotipo",
+  "meet_driver_description": "Seu motorista está lá exclusivamente para você — amigável, pontual e fácil de identificar."
 
   }
   
