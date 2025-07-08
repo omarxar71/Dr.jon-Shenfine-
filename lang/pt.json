@@ -125,7 +125,9 @@
   "meet_driver": "Encontro com o Motorista",
   "meet_driver_steps_1": "Saia pelas portas principais do terminal",
   "meet_driver_steps_2": "Procure por um motorista segurando uma placa com seu nome e nosso logotipo",
-  "meet_driver_description": "Seu motorista está lá exclusivamente para você — amigável, pontual e fácil de identificar."
+  "meet_driver_description": "Seu motorista está lá exclusivamente para você — amigável, pontual e fácil de identificar.",
+  "support_message": "Se você tiver alguma dificuldade em encontrar o motorista, não hesite em nos ligar no número exibido na placa do motorista.",
+  "hotel_checkin": "Check-in no Hotel"
 
   }
   
