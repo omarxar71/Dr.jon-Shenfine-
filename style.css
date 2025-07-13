@@ -1048,7 +1048,7 @@ right: -30px;
   
 }
 
-/* packages section  */
+/* packages section */
 /* gold package  */
 .package-card {
   border: 2px solid gold;
@@ -1058,15 +1058,46 @@ right: -30px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  height: 800px; 
+  min-height: 900px; /* Increased height to accommodate content and button */
+  max-height: 1000px; /* Optional cap to prevent excessive stretching */
   cursor: pointer;
-  
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to top, with centered image */
+  align-items: center; /* Center items horizontally */
 }
-.package-card h3{
- color: var(--secondary-color) !important ;
+
+.package-card h3 {
+  color: var(--secondary-color) !important;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  text-align: center; /* Center the heading text */
 }
+
+.package-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: gold;
+  transition: width 0.3s ease;
+}
+
+.package-card img {
+  display: block; /* Ensure image behaves as a block element */
+  max-width: 100%; /* Prevent overflow */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto 1rem; /* Center horizontally and add space below */
+}
+
+.package-card:hover h3::after {
+  width: 100px;
+}
+
 .package-card:hover {
   transform: translateY(-20px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -1091,34 +1122,10 @@ right: -30px;
     transparent
   );
   transition: 0.5s;
-
 }
 
 .package-card:hover::before {
   left: 100%;
-}
-
-.package-card h3 {
-  color: #333;
-  margin-bottom: 1rem;
-  position: relative;
-  padding-bottom: 0.5rem;
-}
-
-.package-card h3::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 2px;
-  background: gold;
-  transition: width 0.3s ease;
-}
-
-.package-card:hover h3::after {
-  width: 100px;
 }
 
 .package-card ul li {
@@ -1138,6 +1145,7 @@ right: -30px;
 .package-card:hover .fas {
   transform: scale(1.1);
 }
+
 .package-button {
   display: inline-block;
   padding: 12px 30px;
@@ -1148,7 +1156,7 @@ right: -30px;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  margin: 20px auto;
+  margin: 45px auto 20px; /* Bottom margin to space from edge */
   position: relative;
   overflow: hidden;
   transition: all 0.4s ease;
@@ -1157,23 +1165,7 @@ right: -30px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
-  position: relative;
-
-
-
 }
-.package-button-container{
-  position: absolute;
-  bottom: 0;
-  right: -12%;
-  width: fit-content;
-  transform: translate(-50% , -50%);
-  -webkit-transform: translate(-50% , -50%);
-  -moz-transform: translate(-50% , -50%);
-  -ms-transform: translate(-50% , -50%);
-  -o-transform: translate(-50% , -50%);
-}
-
 
 .package-button::before {
   content: "";
@@ -1197,11 +1189,13 @@ right: -30px;
   left: 0;
 }
 
-
+/* Adjust price position for gold package */
+.package-card .package-price {
+  margin-top: 20px; /* Add space above the price to move it down */
+  margin-bottom: 20px; /* Keep existing bottom spacing */
+}
 
 /* platinum package  */
-
-
 .package-card-platinum {
   border: 2px solid #b9f2ff;
   border-radius: 10px;
@@ -1210,15 +1204,46 @@ right: -30px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  height: 800px; 
+  min-height: 900px; /* Increased height to accommodate content and button */
+  max-height: 1000px; /* Optional cap to prevent excessive stretching */
   cursor: pointer;
-  
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to top, with centered image */
+  align-items: center; /* Center items horizontally */
 }
-.package-card-platinum h3{
- color:#b9f2ff !important ;
+
+.package-card-platinum h3 {
+  color: #b9f2ff !important;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  text-align: center; /* Center the heading text */
 }
+
+.package-card-platinum h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: #b9f2ff;
+  transition: width 0.3s ease;
+}
+
+.package-card-platinum img {
+  display: block; /* Ensure image behaves as a block element */
+  max-width: 100%; /* Prevent overflow */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto 1rem; /* Center horizontally and add space below */
+}
+
+.package-card-platinum:hover h3::after {
+  width: 100px;
+}
+
 .package-card-platinum:hover {
   transform: translateY(-20px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -1243,34 +1268,10 @@ right: -30px;
     transparent
   );
   transition: 0.5s;
-
 }
 
 .package-card-platinum:hover::before {
   left: 100%;
-}
-
-.package-card-platinum h3 {
-  color: #333;
-  margin-bottom: 1rem;
-  position: relative;
-  padding-bottom: 0.5rem;
-}
-
-.package-card-platinum h3::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 2px;
-  background: #b9f2ff;
-  transition: width 0.3s ease;
-}
-
-.package-card-platinum:hover h3::after {
-  width: 100px;
 }
 
 .package-card-platinum ul li {
@@ -1290,6 +1291,7 @@ right: -30px;
 .package-card-platinum:hover .fas {
   transform: scale(1.1);
 }
+
 .package-card-platinum .package-button {
   display: inline-block;
   padding: 12px 30px;
@@ -1300,7 +1302,7 @@ right: -30px;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  margin: 20px auto;
+  margin: 20px auto 20px; /* Bottom margin to space from edge */
   position: relative;
   overflow: hidden;
   transition: all 0.4s ease;
@@ -1309,23 +1311,7 @@ right: -30px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
-  position: relative;
-
-
-
 }
-.package-card-platinum .package-button-container{
-  position: absolute;
-  bottom: 0;
-  right: -12%;
-  width: fit-content;
-  transform: translate(-50% , -50%);
-  -webkit-transform: translate(-50% , -50%);
-  -moz-transform: translate(-50% , -50%);
-  -ms-transform: translate(-50% , -50%);
-  -o-transform: translate(-50% , -50%);
-}
-
 
 .package-card-platinum .package-button::before {
   content: "";
@@ -1353,11 +1339,7 @@ right: -30px;
   left: 0;
 }
 
-
-
 /* silver package  */
-
-
 .package-card-silver {
   border: 2px solid silver;
   border-radius: 10px;
@@ -1366,15 +1348,46 @@ right: -30px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
-  height: 800px; 
+  min-height: 900px; /* Increased height to accommodate content and button */
+  max-height: 1000px; /* Optional cap to prevent excessive stretching */
   cursor: pointer;
-  
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align content to top, with centered image */
+  align-items: center; /* Center items horizontally */
 }
-.package-card-silver h3{
- color:silver !important ;
+
+.package-card-silver h3 {
+  color: silver !important;
+  margin-bottom: 1rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  text-align: center; /* Center the heading text */
 }
+
+.package-card-silver h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 2px;
+  background: silver;
+  transition: width 0.3s ease;
+}
+
+.package-card-silver img {
+  display: block; /* Ensure image behaves as a block element */
+  max-width: 100%; /* Prevent overflow */
+  height: auto; /* Maintain aspect ratio */
+  margin: 0 auto 1rem; /* Center horizontally and add space below */
+}
+
+.package-card-silver:hover h3::after {
+  width: 100px;
+}
+
 .package-card-silver:hover {
   transform: translateY(-20px);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
@@ -1399,34 +1412,10 @@ right: -30px;
     transparent
   );
   transition: 0.5s;
-
 }
 
 .package-card-silver:hover::before {
   left: 100%;
-}
-
-.package-card-silver h3 {
-  color: #333;
-  margin-bottom: 1rem;
-  position: relative;
-  padding-bottom: 0.5rem;
-}
-
-.package-card-silver h3::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 2px;
-  background: silver;
-  transition: width 0.3s ease;
-}
-
-.package-card-silver:hover h3::after {
-  width: 100px;
 }
 
 .package-card-silver ul li {
@@ -1446,6 +1435,7 @@ right: -30px;
 .package-card-silver:hover .fas {
   transform: scale(1.1);
 }
+
 .package-card-silver .package-button {
   display: inline-block;
   padding: 12px 30px;
@@ -1456,7 +1446,7 @@ right: -30px;
   font-weight: bold;
   text-decoration: none;
   text-align: center;
-  margin: 20px auto;
+  margin: 20px auto 20px; /* Bottom space from edge */
   position: relative;
   overflow: hidden;
   transition: all 0.4s ease;
@@ -1465,23 +1455,7 @@ right: -30px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   -o-border-radius: 2px;
-  position: relative;
-
-
-
 }
-.package-card-silver .package-button-container{
-  position: absolute;
-  bottom: 0;
-  right: -12%;
-  width: fit-content;
-  transform: translate(-50% , -50%);
-  -webkit-transform: translate(-50% , -50%);
-  -moz-transform: translate(-50% , -50%);
-  -ms-transform: translate(-50% , -50%);
-  -o-transform: translate(-50% , -50%);
-}
-
 
 .package-card-silver .package-button::before {
   content: "";
@@ -1509,6 +1483,52 @@ right: -30px;
   left: 0;
 }
 
+/* Price styling and animations */
+.package-price {
+  position: relative;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 5px;
+  animation: bounce 2s infinite, fadeAndBrightness 4s infinite;
+  transition: all 0.3s ease;
+}
+
+/* Bounce animation (up and down movement) */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Fade and brightness animation (bright to dark) */
+@keyframes fadeAndBrightness {
+  0% { opacity: 1; filter: brightness(1.2); }
+  50% { opacity: 0.5; filter: brightness(0.8); }
+  100% { opacity: 1; filter: brightness(1.2); }
+}
+
+/* Color matching for each package */
+.package-card-silver .package-price {
+  color: silver;
+  background-color: rgba(192, 192, 192, 0.2);
+}
+
+.package-card .package-price {
+  color: gold;
+  background-color: rgba(255, 215, 0, 0.2);
+}
+
+.package-card-platinum .package-price {
+  color: #b9f2ff;
+  background-color: rgba(185, 242, 255, 0.2);
+}
+
+/* Ensure the price stays above the button and doesn't overlap */
+.package-price {
+  margin-bottom: 20px; /* Space between price and button */
+}
 
 /* services-section-w-icons section  */
 
@@ -1648,26 +1668,138 @@ right: -30px;
   line-height: 1.6; /* Improves readability with larger text */
 }
 
+/* Footer styling */
+body .footer {
+  background-color: #000 !important; /* Force black background */
+  color: var(--secondary-color); /* Gold text for general content */
+  padding: 40px 20px; /* Increased padding for better spacing */
+  border-top: 2px solid var(--secondary-color); /* Gold border to match theme */
+  font-family: 'Libertinus Mono', monospace; /* Matches body font */
+  background-image: none !important; /* Reset any background images */
+  background: #000 !important; /* Redundant backup to ensure black */
+}
 
+.footer a {
+  color: var(--secondary-color); /* Gold links to match theme */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
 
+.footer a:hover {
+  color: #ffd700; /* Slightly brighter gold on hover */
+  transform: translateY(-2px); /* Subtle lift effect */
+  text-decoration: underline;
+}
 
+.emergency-contact {
+  font-weight: bold;
+  color: #ffcc00; /* Bright gold for emergency contact */
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  animation: pulse 2s infinite alternate; /* Matching animation */
+}
 
+@keyframes pulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.05); }
+}
 
+.text-center.mt-4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--secondary-color); /* Gold for centered text */
+}
 
+.footer .social-icons {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 15px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+}
 
+.footer .social-icons i {
+  font-size: 30px;
+  color: var(--secondary-color);
+  margin-top: 20px;
+  transition: color 0.4s ease-in-out, background-color 0.4s ease-in-out;
+  padding: 8px;
+  border-radius: 5px;
+}
 
+.footer .social-icons i:hover {
+  color: #000; /* Black on hover to contrast gold background */
+  background-color: var(--secondary-color);
+}
 
+/* Preserve white text where intended (e.g., specific elements) */
+.footer .white-text {
+  color: #fff !important; /* Class to preserve white text */
+}
+.emergency-contact {
+  font-weight: bold;
+  color: #ffcc00; /* Matches gold theme if desired */
+}
 
+.text-center a {
+  text-decoration: none;
+  color: inherit;
+}
 
+.text-center a:hover {
+  text-decoration: underline;
+}
 
+/* Price styling and animations */
+.package-price {
+  position: relative;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 5px;
+  animation: bounce 2s infinite, fadeAndBrightness 4s infinite;
+  transition: all 0.3s ease;
+}
 
+/* Bounce animation (up and down movement) */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
 
+/* Fade and brightness animation (bright to dark) */
+@keyframes fadeAndBrightness {
+  0% { opacity: 1; filter: brightness(1.2); }
+  50% { opacity: 0.5; filter: brightness(0.8); }
+  100% { opacity: 1; filter: brightness(1.2); }
+}
 
+/* Color matching for each package */
+.package-card-silver .package-price {
+  color: silver;
+  background-color: rgba(192, 192, 192, 0.2);
+}
 
+.package-card .package-price {
+  color: gold;
+  background-color: rgba(255, 215, 0, 0.2);
+}
 
+.package-card-platinum .package-price {
+  color: #b9f2ff;
+  background-color: rgba(185, 242, 255, 0.2);
+}
 
-
-
-
-
+/* Ensure the price stays above the button and doesn't overlap */
+.package-price {
+  margin-bottom: 20px; /* Space between price and button */
+}
 
